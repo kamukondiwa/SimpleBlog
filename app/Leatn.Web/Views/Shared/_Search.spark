@@ -1,0 +1,7 @@
+<div id="siteSearch">
+<form method="get">
+	<img src="/content/images/sb_search.png" alt="search icon">
+	<input type="text" id="form_text" name="form.text"></input>
+	<input type="submit" value="Search" />
+</form>
+</div>

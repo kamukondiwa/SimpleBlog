@@ -1,0 +1,19 @@
+﻿<viewdata model="BlogUserPageViewModel"/>
+
+<div class="page-content content-with-links">
+
+	<h2>!{Model.Author + "'s"} Blogs</h2>
+
+	<%Html.Matrix(Model.Blogs, 10, 1, blog =>
+      { %>
+	<div class="post">
+		<h2 class="title">!{Html.ActionLink<BlogController>(c => c.Read(blog.Url), blog.Title)}</h2>
+		<p class="meta"><span class="date">created on !{blog.CreationDate}</span><span class="posted">By <a href="#">!{blog.Author}</a></span></p>
+		<div class="entry">
+			<p>!{blog.Description}</p>
+			<p class="links">!{Html.ActionLink<BlogController>(c => c.Read(blog.Url), "Read more")}</p>
+		</div>
+	</div>
+	 <% }).Build();
+	 %>	
+ </div>

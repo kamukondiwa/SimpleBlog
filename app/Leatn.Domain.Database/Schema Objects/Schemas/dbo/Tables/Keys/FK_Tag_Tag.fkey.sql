@@ -1,0 +1,4 @@
+﻿ALTER TABLE [dbo].[Tag] 
+WITH CHECK ADD CONSTRAINT [FK_Tag_Tag] 
+FOREIGN KEY([TagId])
+REFERENCES [dbo].[Tag] ([Id])

@@ -1,0 +1,26 @@
+﻿pre.black 
+{
+	background-color:#2e2e2e;
+	border: none;
+	border-left:solid 2em #ccc;
+	border-bottom: 1px solid #ccc;
+	color: #fff;
+}
+
+pre {
+	background: #f0f0f0;
+	border-left:solid 2em #2e2e2e;
+	border-bottom: 1px solid #ccc;
+	overflow: auto;
+	padding-bottom:1em;
+}
+
+pre code {
+	margin: 0 0 0 40px;
+	display: block;
+}
+
+.code 
+{
+	margin: 2em 0;
+}

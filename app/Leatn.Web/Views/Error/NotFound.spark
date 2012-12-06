@@ -1,0 +1,12 @@
+﻿<viewdata model="PageViewModel"/>
+
+<content name="title">
+Error 404
+</content>
+
+<div class="page-content">
+
+  <h2>Page not found.</h2>
+
+</div>
+

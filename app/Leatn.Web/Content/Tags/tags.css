@@ -1,0 +1,12 @@
+﻿div#tags{background-color:#FFFFFF; width: 60em; padding:4em; position:absolute; left:-250px;}
+div#selected-tags{background-color:#638291; width:100%; border:1px solid #5B7444; font-weight:bold;}
+.selected-tag{background-color:#E8EFF3; height:2em; line-height:2em; vertical-align:middle; width:auto; text-align:center;}
+.selected-tag p {margin:auto;}
+p.tag-message{margin:0.4em; }
+
+/* Z-index of #mask must lower than #boxes .window */
+#mask {position:absolute;z-index:9000;background-color:#000; display:none;left:-0em; top:-0em;}
+#boxes .window {position:absolute;width:440px;height:200px;display:none;z-index:9999;padding:20px;}
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog {width:375px; height:203px;}
+a.no-border{ border: none; text-decoration:none;}

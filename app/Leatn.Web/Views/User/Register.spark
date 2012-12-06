@@ -1,0 +1,60 @@
+﻿<viewdata model="UserPageViewModel"/>
+<content name="title">
+Simple Blog - Register Today!
+</content>
+
+<content name="pageTitle">
+	&nbsp;
+</content>
+
+<div class="page-content" >
+
+  <h1 class="page-heading">
+	Get your Simple blog account today!
+  </h1>
+  
+  <form method="post">
+
+	!{Html.Hidden("Form.Id", Model.Form.Id)}
+
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Username).Label("Username:")}
+		!{this.ValidationMessage(x => x.Form.Username)}
+	</div>
+		
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Forename).Label("Forname:")}
+		!{this.ValidationMessage(x => x.Form.Forename)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Surname).Label("Surname:")}
+		!{this.ValidationMessage(x => x.Form.Surname)}
+	</div>
+	
+	<div class="formInput">
+		!{this.Password(x => x.Form.Password).Label("Password:")}
+		!{this.ValidationMessage(x => x.Form.Password)}
+	</div>
+
+	<div class="formInput">
+		!{this.Password(x => x.Form.ConfirmationPassword).Label("Confirm Password:")}
+		!{this.ValidationMessage(x => x.Form.ConfirmationPassword)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Email).Label("Email:")}
+		!{this.ValidationMessage(x => x.Form.Email)}
+	</div>
+
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.ConfirmationEmail).Label("Confirm Email:")}
+		!{this.ValidationMessage(x => x.Form.ConfirmationEmail)}
+	</div>
+		
+	!{this.SubmitButton("Register")}
+    !{Html.ClientSideValidation<UserFormViewModel>("Form")}
+
+  </form>
+
+</div>

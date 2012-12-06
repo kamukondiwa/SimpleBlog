@@ -1,0 +1,15 @@
+﻿<viewdata model="PageViewModel"/>
+<content name="title">
+	Simple Blog - Contact
+</content>
+
+<content name="pageTitle">
+	&nbsp;
+</content>
+
+<div class="page-content">
+
+    <h1 class="page-heading">Contact Information</h1>
+    
+	<p>I will get around to implementing something useful here. Until then <a href="http://www.twitter.com/kamukondiwa" target="_blank"> I'm available on Twitter</a></p>
+</div>

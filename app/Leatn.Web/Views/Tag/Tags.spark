@@ -1,0 +1,17 @@
+﻿<viewdata model="TagPageViewModel"/>
+
+<content name="title">
+  Simple Blog - Tags - !{Model.Tag.Name}
+</content>
+
+<content name="pageTitle">
+  &nbsp;
+</content>
+
+<div class="page-content" >
+
+  <h1 class="page-heading">
+    Tags
+  </h1>
+  <Tags Tag="Model.Tag"/>
+</div>

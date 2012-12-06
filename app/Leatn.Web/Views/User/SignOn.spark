@@ -1,0 +1,36 @@
+﻿<viewdata model="UserSignOnPageViewModel"/>
+<content name="title">
+Simple Blog - SignOn!
+</content>
+
+<content name="pageTitle">
+	&nbsp;
+</content>
+
+<div class="page-content" >
+
+  <h1 class="page-heading">
+	SignOn!
+  </h1>
+  
+  <form method="post">
+
+	!{Html.Hidden("ReturnUrl", Model.ReturnUrl)}
+
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Username).Label("Username:")}
+		!{this.ValidationMessage(x => x.Form.Username)}
+	</div>
+	
+	<div class="formInput">
+		!{this.Password(x => x.Form.Password).Label("Password:")}
+		!{this.ValidationMessage(x => x.Form.Password)}
+	</div>
+
+	!{this.SubmitButton("SignOn")}
+	
+  !{Html.ClientSideValidation<UserSignOnFormViewModel>("Form")}
+
+  </form>
+
+</div>

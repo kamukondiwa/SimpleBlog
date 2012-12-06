@@ -1,0 +1,4 @@
+﻿ALTER TABLE [dbo].[Blog] 
+WITH CHECK ADD CONSTRAINT [FK_Blog_User] 
+FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([Id])

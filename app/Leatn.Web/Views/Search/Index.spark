@@ -1,0 +1,58 @@
+﻿<viewdata model="SearchPageViewModel"/>
+
+<content name="title">
+	Simple Blog - Search
+</content>
+
+<content name="pageTitle">
+	&nbsp;
+</content>
+
+<div class="page-content">
+
+  <h1 class="page-heading">Simple blog &amp; post search</h1>
+
+  <form method="post" action="!{Url.Action("index")}">
+
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Keywords).Label("Keywords:")}
+		!{this.ValidationMessage(x => x.Form.Keywords)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.DateFrom).Label("Date From:").Class("date-picker").Value(Model.DateFrom)}
+		!{this.ValidationMessage(x => x.Form.DateFrom)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.DateTo).Label("Date To:").Class("date-picker").Value(Model.DateTo)}
+		!{this.ValidationMessage(x => x.Form.DateTo)}
+	</div>
+	
+	<div class="formInput">
+		<label for="form.ContentType">Content Type</label>
+		!{Html.DropDownList("form.ContentType", Model.ContentTypes)}
+		!{this.ValidationMessage(x => x.Form.ContentType)}
+	</div>
+
+	<div class="formInput">
+	!{this.SubmitButton("Search")}
+	</div>
+	
+  <h3>Results</h3>
+  
+  <hr />
+	
+<%Html.Matrix(Model.Results, 10, 1, result =>
+  { %>
+	<div class="page-content soft-link">
+		<h2 if="result.IsBlogPost()">!{Html.ActionLink<PostController>(c => c.Read(result.BlogUrl, result.Url), result.Title, new { class = "search-result" })}</h2>
+		<h2 if="!result.IsBlogPost()">!{Html.ActionLink<BlogController>(c => c.Read(result.Url), result.Title, new { class = "search-result" })}</h2>
+	</div>
+	<% }).Build();
+%>	
+    !{Html.ClientSideValidation("form", typeof(SearchFormViewModel))}
+  </form>
+  
+</div>
+

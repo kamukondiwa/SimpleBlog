@@ -1,0 +1,58 @@
+﻿<viewdata model="BlogPostListPageViewModel"/>
+
+<content name="pageTitle">
+<label class="page-title">
+	<h1><a if="Request.IsAuthenticated" href="!{Url.CreateBlog()}">Create blog</a>
+	  <if condition="Model.ShowAddPostLink">
+		<a href="!{Url.CreateBlogPost(Model.BlogUrl)}"> | Make a new post</a>
+	  </if>
+	</h1>
+</label>
+</content>
+
+<div class="page-content content-with-links">
+
+	<h1 class="page-heading">Latest blog posts</h1>
+
+    <div class="scrolling-feed">
+		<ul>
+		<%Html.Matrix(Model.Results, 10, 1, post =>
+          { %>
+			<li>
+				<h2>!{Html.ActionLink<PostController>(c => c.Read(post.BlogUrl, post.Url), post.Title)}</h2>
+				<p><span>Posted on !{post.PostDate}</span><span> By <a href="#">!{post.Author}</a></span></p>
+				<hr/>	
+			</li>
+			<% }).Build();
+		 %>	
+		</ul>
+	</div>
+	
+</div>
+
+<div class="page-content right-content">
+
+<h1 class="page-heading">About</h1>
+
+	<p>
+		The idea behind Simple blog is to build a very
+		basic blogging application. Then build on that 
+		very simple application and hopefully learn a thing or two 
+		on the way. 
+	</P>
+	<br/>
+	<p>
+		Providing the simplest functional implementation
+		was the goal before getting Simple Blog online. 
+		Improvements will follow in freaquent smaller
+		feature releases. I will also try to blog about any 
+		points of interest.
+	</p>
+</div>
+
+<div class="page-content left-content">
+
+<h1 class="page-heading">Contact</h1>
+
+	<p>I will get around to implementing something useful here. Until then <a href="http://www.twitter.com/kamukondiwa" target="_blank"> I'm available on Twitter</a></p>
+</div>

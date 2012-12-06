@@ -1,0 +1,37 @@
+﻿<viewdata model="BlogPageViewModel"/>
+
+<MetaDataTags MetaData="Model.Form"/>
+
+<content name="pageTitle">
+	<label class="page-title">
+		<h1 if="Model.ShowOtherBlogsLink">!{Html.ActionLink<BlogController>(c => c.ReadUserBlogs(Model.Author), "Other Blogs by this user")}&nbsp;
+			<if condition="Model.ShowAddPostLink">
+			!{Html.ActionLink<PostController>(c => c.Add(Model.Form.Url), "| Make a new post")}
+			</if>
+		</h1>
+	</label>
+</content>
+
+<div class="page-content content-with-links">
+
+	<h3>!{Model.Form.Description}</h3>
+	  
+	<div class="post">
+		<h2 class="title">!{Model.Form.Title}</h2>
+		<p class="meta"><span class="date">Created !{Model.CreationDate}</span></p>
+	</div> 
+
+	<%Html.Matrix(Model.BlogPosts, 10, 1, blogPost =>
+      { %>
+		 <div class="post">
+			<h2 class="title">!{Html.ActionLink<PostController>(c => c.Read(Model.Form.Url, blogPost.Url), blogPost.Title)}</h2>
+			<p class="meta"><span class="date">Posted on !{blogPost.PostDate}</span><span class="posted">By <a href="#">!{blogPost.Author}</a></span></p>
+			<div class="entry">
+				<p>!{blogPost.Teaser}</p>
+				<p class="links">!{Html.ActionLink<PostController>(c => c.Read(Model.Form.Url, blogPost.Url), "Read more...")}</p>
+			</div>
+		</div>
+	   <% }).Build();
+	 %>		
+ 
+</div>

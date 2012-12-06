@@ -1,0 +1,36 @@
+﻿<viewdata model="BlogPageViewModel"/>
+<content name="title">
+Simple Blog - Create a blog today!
+</content>
+
+<div class="page-content">
+
+  <h1 class="page-heading">
+  
+	  <if condition="Model.Form.Id > 0">
+		Edit
+	  </if>
+	  <else>
+		Create
+	  </else>
+		Blog
+		
+  </h1>
+  
+  <form method="post">
+
+	!{Html.Hidden("Form.Id", Model.Form.Id)}
+
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Url).Label("Url:")}
+		!{this.ValidationMessage(x => x.Form.Url)}
+	</div>
+
+	<MetaData/>
+
+	!{this.SubmitButton("Create Blog")}
+    !{Html.ClientSideValidation<BlogFormViewModel>("Form")}
+
+  </form>
+
+</div>

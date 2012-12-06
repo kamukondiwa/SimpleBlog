@@ -1,0 +1,40 @@
+﻿<viewdata model="PageViewModel"/>
+
+<content name="title">
+	Simple Blog - About
+</content>
+
+<content name="pageTitle">
+	&nbsp;
+</content>
+
+<div class="page-content">
+
+	<h1 class="page-heading">Simple Blog</h1>
+
+	<div>
+
+		<p>
+			In an effort to try out new technologies and tools to improve my skill and knowledge as a developer I seem to always have a project on the go. Unfortunately I always have grand Ideas for these projects
+			and tend to dive right in. As fun as that is, I have in the past, found myself getting far too involed in particualr parts of the project and losing sight of the overall goal. Who wouldn't want to know everything about everything?
+		</p>
+		
+		<br />
+		<p>
+			Although this doesn't normally turn out to be a very productive endovour, in terms of how much of the grand Idea project functionaly gets completed, I still find that the lessons learnt in this process are of great value no matter how seemingly trivial some of them may be.
+			It is also my belief that they may be of some use to others out there.
+		</p>
+		<br />
+
+		<p>
+			I have been reading up on the Domain Driven Development approach to software development and It's getting me thinking in a refreshly more focused way. Simple blog is an effort to try and get to grips with the idea of DDD while learning some new tech that I've recenlty been introduced to. I am trying to get used to discussing issues that I come across with the wider development community.
+		</p>
+		<br />
+
+		<p>
+			The idea behind Simple blog is to identify a problem domain (I need an application that allows me to blog about the tasty things I learn). The development of a solution to said problem should be as simple as possible. Providing the simplest functional implementation was the goal before getting Simple blog online. All improvements will follow in consequent releases which should be frequent.
+		</p>
+
+	</div>
+
+</div>

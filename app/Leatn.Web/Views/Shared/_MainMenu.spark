@@ -1,0 +1,13 @@
+<ul class="lavaLamp">
+  <li>
+    <a href="!{Url.Home()}">Home</a>
+  </li>
+  <li><a href="!{Url.Action<SearchController>(c => c.Index(null))}">Search</a></li>
+  <li>
+    <a href="!{Url.About()}">About</a>
+  </li>
+  <li>
+    <a href="!{Url.Contact()}">Contact</a>
+  </li>
+</ul>
+

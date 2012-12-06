@@ -1,0 +1,18 @@
+﻿<viewdata id="string" name="string" value="string" rows="string" columns="string"/>
+<content name="htmlInputScript">
+    
+	<script language="Javascript" src="${SiteRoot}/Content/ckeditor/ckeditor.js" type="text/javascript"></script>
+	<script language="Javascript" src="${SiteRoot}/Content/ckeditor/_samples/sample.js" type="text/javascript"></script>
+	<link href="${SiteRoot}/Content/ckeditor/_samples/sample.css" rel="stylesheet" type="text/css"/>
+
+</content>
+
+<div>
+!{this.TextArea(name)
+      .Id(id)
+      .Value(value)
+      .Attr("class", "ckeditor")
+      .Attr("rows", rows)
+      .Attr("columns", columns)}
+</div>
+

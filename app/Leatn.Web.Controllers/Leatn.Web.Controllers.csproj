@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E86EA2C6-88D3-42A2-94FF-19AAA640A06C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Leatn.Web.Controllers</RootNamespace>
+    <AssemblyName>Leatn.Web.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\..\referencedAssemblies\AutoMapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel">
+      <HintPath>..\..\lib\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Gentax, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\GenericTaxonomy\trunk\src\Gentax\Gentax\bin\Debug\Gentax.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications, Version=0.5.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Machine.Specifications.0.5.10\lib\net20\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.AutoMocking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\referencedAssemblies\Machine.Specifications\Machine.Specifications.AutoMocking.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\referencedAssemblies\Machine.Specifications\Machine.Specifications.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib, Version=2.0.36.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.Castle">
+      <HintPath>..\..\lib\MvcContrib.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.FluentHtml">
+      <HintPath>..\..\lib\MvcContrib.FluentHtml.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Validator, Version=1.2.0.3001, Culture=neutral, PublicKeyToken=70154e18752585bd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NHibernate.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\..\..\referencedAssemblies\RhinoMocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpArch, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\SharpArch.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\..\referencedAssemblies\MEF\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="xVal">
+      <HintPath>..\..\..\..\referencedAssemblies\xVal\xVal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blog\BlogController.cs" />
+    <Compile Include="Blog\BlogControllerSpec.cs" />
+    <Compile Include="Blog\Mappers\BlogFormViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\BlogPageViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\BlogPostArchivePageViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\BlogPostSummaryPageViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\BlogSaveDetailsMapper.cs" />
+    <Compile Include="Blog\Mappers\BlogUserPageViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\BlogUserPageViewModelMapperSpec.cs" />
+    <Compile Include="Blog\Mappers\Contracts\BlogSummaryViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\Contracts\IBlogFormViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\Contracts\IBlogPageViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\Contracts\IBlogPostArchivePageViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\Contracts\IBlogSaveDetailsMappper.cs" />
+    <Compile Include="Blog\Mappers\Contracts\IBlogSummaryViewModelMapper.cs" />
+    <Compile Include="Blog\Mappers\Contracts\IBlogUserPageViewModelMapper.cs" />
+    <Compile Include="Blog\ViewModels\BlogFormViewModel.cs" />
+    <Compile Include="Blog\ViewModels\BlogPageViewModel.cs" />
+    <Compile Include="Blog\ViewModels\BlogPostArchivePageViewModel.cs" />
+    <Compile Include="Blog\ViewModels\BlogSummaryViewModel.cs" />
+    <Compile Include="Blog\ViewModels\BlogUserPageViewModel.cs" />
+    <Compile Include="Comments\Mappers\BlogPostCommentPageViewModelMapper.cs" />
+    <Compile Include="Comments\Mappers\BlogPostCommentSaveDetailsMapper.cs" />
+    <Compile Include="Comments\Mappers\Contracts\IBlogPostCommentPageViewModelMapper.cs" />
+    <Compile Include="Comments\Mappers\Contracts\IBlogPostCommentSaveDetailsMapper.cs" />
+    <Compile Include="Comments\ViewModels\BlogPostCommentFormViewModel.cs" />
+    <Compile Include="Comments\ViewModels\BlogPostCommentPageViewModel.cs" />
+    <Compile Include="Error\ErrorController.cs" />
+    <Compile Include="Error\ViewModels\ErrorPageViewModel.cs" />
+    <Compile Include="Initialisers\RouteInitialiser.cs" />
+    <Compile Include="Post\Mappers\BlogPostFormViewModelMapper.cs" />
+    <Compile Include="Post\Mappers\BlogPostListPageViewModelMapper.cs" />
+    <Compile Include="Post\Mappers\BlogPostListPageViewModelMapperSpec.cs" />
+    <Compile Include="Post\Mappers\BlogPostPageViewModelMapper.cs" />
+    <Compile Include="Post\Mappers\BlogPostPageViewModelMapperSpec.cs" />
+    <Compile Include="Post\Mappers\BlogPostSaveDetailsMapper.cs" />
+    <Compile Include="Post\Mappers\BlogPostSaveDetailsMapperSpec.cs" />
+    <Compile Include="Post\Mappers\Contracts\IBlogPostFormViewModelMapper.cs" />
+    <Compile Include="Post\Mappers\Contracts\IBlogPostListPageViewModelMapper.cs" />
+    <Compile Include="Post\Mappers\Contracts\IBlogPostPageViewModelMapper.cs" />
+    <Compile Include="Post\Mappers\Contracts\IBlogPostSaveDetailsMapper.cs" />
+    <Compile Include="Post\Mappers\Contracts\IBlogPostSummaryPageViewModelMapper.cs" />
+    <Compile Include="Post\PostController.cs" />
+    <Compile Include="Post\PostControllerSpec.cs" />
+    <Compile Include="Post\ViewModels\BlogPostFormViewModel.cs" />
+    <Compile Include="Post\ViewModels\BlogPostListPageViewModel.cs" />
+    <Compile Include="Post\ViewModels\BlogPostPageViewModel.cs" />
+    <Compile Include="Post\ViewModels\BlogPostSummaryPageViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\ControllersRegistrarMarker.cs" />
+    <Compile Include="Registrars\ControllerFactoryRegistrar.cs" />
+    <Compile Include="Registrars\ControllerRegistrar.cs" />
+    <Compile Include="Registrars\MapperRegistrar.cs" />
+    <Compile Include="Registrars\ValidationRegistrar.cs" />
+    <Compile Include="RSS\Mappers\Contracts\IRSSElementViewModelMapper.cs" />
+    <Compile Include="RSS\Mappers\Contracts\IRSSFeedViewModelMapper.cs" />
+    <Compile Include="RSS\Mappers\RssElementViewModelMapper.cs" />
+    <Compile Include="RSS\Mappers\RSSFeedViewModelMapper.cs" />
+    <Compile Include="RSS\Mappers\RSSFeedViewModelMapperSpec.cs" />
+    <Compile Include="RSS\RSSController.cs" />
+    <Compile Include="RSS\RSSControllerSpec.cs" />
+    <Compile Include="RSS\ViewModels\RssElementViewModel.cs" />
+    <Compile Include="RSS\ViewModels\RSSFeedViewModel.cs" />
+    <Compile Include="Search\Mappers\Contracts\ISearchContentTypeSelectListMapper.cs" />
+    <Compile Include="Search\Mappers\Contracts\ISearchPageViewModelMapper.cs" />
+    <Compile Include="Search\Mappers\Contracts\ISearchParameterMapper.cs" />
+    <Compile Include="Search\Mappers\Contracts\ISearchResultViewModelMapper.cs" />
+    <Compile Include="Search\Mappers\Contracts\SearchContentTypeSelectListMapper.cs" />
+    <Compile Include="Search\Mappers\SearchPageViewModelMapper.cs" />
+    <Compile Include="Search\Mappers\SearchPageViewModelMapperSpec.cs" />
+    <Compile Include="Search\Mappers\SearchParameterMapper.cs" />
+    <Compile Include="Search\Mappers\SearchResultViewModelMapper.cs" />
+    <Compile Include="Search\Mappers\SearchResultViewModelMapperSpec.cs" />
+    <Compile Include="Search\SearchController.cs" />
+    <Compile Include="Search\SearchControllerSpec.cs" />
+    <Compile Include="Search\ViewModels\SearchFormViewModel.cs" />
+    <Compile Include="Search\ViewModels\SearchPageViewModel.cs" />
+    <Compile Include="Search\ViewModels\SearchResultViewModel.cs" />
+    <Compile Include="Shared\ActionResults\NotFoundResult.cs" />
+    <Compile Include="Shared\ActionResults\RssResult.cs" />
+    <Compile Include="Shared\Mappers\ArchiveMonthsViewModelMapper.cs" />
+    <Compile Include="Shared\Mappers\ArchiveSectionViewModelMapper.cs" />
+    <Compile Include="Shared\Mappers\ArchiveSectionViewModelMapperSpec.cs" />
+    <Compile Include="Shared\Mappers\ArchiveYearViewModelMapper.cs" />
+    <Compile Include="Shared\Mappers\ArchiveYearViewModelMapperSpec.cs" />
+    <Compile Include="Shared\Mappers\Contracts\IArchiveMonthsViewModelMapper.cs" />
+    <Compile Include="Shared\Mappers\Contracts\IArchiveSectionViewModelMapper.cs" />
+    <Compile Include="Shared\Mappers\Contracts\IArchiveYearViewModelMapper.cs" />
+    <Compile Include="Shared\ViewModels\ArchiveMonthViewModel.cs" />
+    <Compile Include="Shared\ViewModels\ArchiveSectionViewModel.cs" />
+    <Compile Include="Shared\ViewModels\ArchiveYearViewModel.cs" />
+    <Compile Include="Shared\ViewModels\PageViewModel.cs" />
+    <Compile Include="Tag\Mappers\Contracts\ITagPageViewModelMapper.cs" />
+    <Compile Include="Tag\Mappers\TagPageViewModelMapper.cs" />
+    <Compile Include="Tag\TagController.cs" />
+    <Compile Include="Tag\TagControllerSpec.cs" />
+    <Compile Include="Tag\ViewModels\TagPageViewModel.cs" />
+    <Compile Include="User\Mappers\Contracts\IUserSaveDetailsMapper.cs" />
+    <Compile Include="User\Mappers\Contracts\IUserSignOnDetailsMapper.cs" />
+    <Compile Include="User\Mappers\UserSaveDetailsMapper.cs" />
+    <Compile Include="User\Mappers\UserSignOnDetailsMapper.cs" />
+    <Compile Include="User\UserController.cs" />
+    <Compile Include="User\UserControllerSpec.cs" />
+    <Compile Include="User\ViewModels\UserFormViewModel.cs" />
+    <Compile Include="User\ViewModels\UserPageViewModel.cs" />
+    <Compile Include="User\ViewModels\UserSignOnFormViewModel.cs" />
+    <Compile Include="User\ViewModels\UserSignOnPageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Leatn.Domain\Leatn.Domain.csproj">
+      <Project>{7A00C6BC-63A3-4837-90EF-086C55CDAA63}</Project>
+      <Name>Leatn.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leatn.Framework\Leatn.Framework.csproj">
+      <Project>{9A74878B-D9C6-411B-879F-E3E1633EE2B7}</Project>
+      <Name>Leatn.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leatn.Tasks\Leatn.Tasks.csproj">
+      <Project>{DFD18F41-7A79-4D4A-9F7D-EC5BC6865DA2}</Project>
+      <Name>Leatn.Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leatn.Web.Mvc\Leatn.Web.Mvc.csproj">
+      <Project>{41A8AC81-381C-43EB-93ED-9D8AAE2B60A5}</Project>
+      <Name>Leatn.Web.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

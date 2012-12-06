@@ -1,0 +1,2 @@
+﻿ALTER TABLE [dbo].[Blog] 
+ADD CONSTRAINT [UC_BlogUrl] UNIQUE ([Url])

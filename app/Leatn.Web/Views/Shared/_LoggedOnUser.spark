@@ -1,0 +1,9 @@
+﻿<div id="logindisplay">
+ Welcome, 
+	<if condition="Request.IsAuthenticated">
+	 !{Html.Encode(Context.User.Identity.Name)} 
+	</if>
+	<else>
+	Guest 
+	</else>
+</div>

@@ -1,0 +1,5 @@
+﻿ALTER TABLE [dbo].[BlogPostTag] 
+ADD CONSTRAINT [PK_BlogPostTag] 
+PRIMARY KEY CLUSTERED (
+	[Id] ASC 
+	)

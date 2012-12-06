@@ -1,0 +1,11 @@
+<ViewData MetaData="IMetaData" />
+
+<content name="metaData" if="MetaData != null">
+<content name="title">
+	Simple Blog - !{MetaData.Title}
+</content>
+	<meta name="description" content="!{MetaData.Description}" /> 
+	<meta name="keywords" content="!{MetaData.Keywords}" /> 
+</content>
+
+	

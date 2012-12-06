@@ -1,0 +1,11 @@
+﻿<viewdata model="PageViewModel"/>
+
+<content name="title">
+Error 500
+</content>
+
+<div class="page-content">
+
+  <h2>System error</h2>
+
+</div>

@@ -1,0 +1,47 @@
+﻿<viewdata model="BlogPostPageViewModel"/>
+<content name="title">
+Simple Blog - Add new blog post
+</content>
+
+<content name="pageTitle">
+	&nbsp;
+</content>
+
+<div class="page-content">
+
+  <h1 class="page-heading">
+	  <if condition="Model.Form.Id > 0">
+		Edit
+	  </if>
+	  <else>
+		Add
+	  </else>
+		Post
+		
+  </h1>
+
+  <form method="post" action="!{Url.Action("edit", "post", new { url = Model.BlogUrl })}">
+
+	<input type="hidden" id="Form_BlogUrl"  name="Form.BlogUrl" value="!{Model.BlogUrl}"/>
+	
+	<input type="hidden" id="Form_PostDate"  name="Form.PostDate" value="!{Model.Form.PostDate}"/>
+	
+	!{Html.Hidden("Form.Id", Model.Form.Id)}
+	
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Url).Label("Url:")}
+		!{this.ValidationMessage(x => x.Form.Url)}
+	</div>
+
+  <Tags Tags="Model.Tags" AssignedTags="Model.AssignedTags"/>
+
+  <MetaData/>
+
+	<HtmlInputArea id="'Form_Body'" name="'Form.Body'" value="Model.Form.Body" columns="'100'"/>
+	!{this.ValidationMessage(x => x.Form.Body)}
+	
+	!{this.SubmitButton("Post")}
+    !{Html.ClientSideValidation<BlogPostFormViewModel>("Form")}
+  </form>
+
+</div>

@@ -1,0 +1,19 @@
+<ul  if="!Model.ArchiveSectionViewModel.IsEmpty()" id="menu1" class="accordian-menu">
+<li>
+	<h2>
+	  Archive
+	</h2>
+</li>
+	<li>
+	<for each="var archive in Model.ArchiveSectionViewModel.Archives">
+		<a href="!{Url.Action<BlogController>(x => x.ArchiveByYear(archive.BlogUrl, archive.ArchiveYear))}" target="_blank"> !{archive.ArchiveYear}</a>
+		<ul>
+			<for  each="var archiveMonth in archive.ArchiveMonths">
+				<li>
+					<a href="!{Url.Action<BlogController>(x => x.ArchiveByMonth(archive.BlogUrl, archive.ArchiveYear, archiveMonth.Name))}" target="_blank"> !{archiveMonth.Name}</a>
+				</li>
+			</for>
+		</ul>
+	</for>
+	</li>
+</ul>

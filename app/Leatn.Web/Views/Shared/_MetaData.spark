@@ -1,0 +1,14 @@
+	<div class="formInput">
+		!{this.TextBox(x => x.Form.Title).Label("Title:")}
+		!{this.ValidationMessage(x => x.Form.Title)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextArea(x => x.Form.Keywords).Label("Keywords:")}
+		!{this.ValidationMessage(x => x.Form.Keywords)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextArea(x => x.Form.Description).Label("Description:")}
+		!{this.ValidationMessage(x => x.Form.Description)}
+	</div>

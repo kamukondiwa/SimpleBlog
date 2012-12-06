@@ -1,0 +1,113 @@
+﻿
+/* social menu */
+
+#social
+{
+	float: right;
+	clear: both;
+}
+
+#social ul
+{
+	margin: 0px 0px 0px 10px;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+	float: right;
+}
+
+#social img
+{
+	height: 30px;
+	width: 30px;
+	border: none;
+	float: right;
+}
+
+/* sideMenu */
+
+.sideMenu ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sideMenu li
+{
+	margin: 0;
+	padding: 0;
+}
+
+.sideMenu li ul
+{
+	margin: 0px 0px;
+	padding-bottom: 30px;
+}
+
+.sideMenu li li
+{
+	line-height: 35px;
+	border-bottom: 1px dotted #E5E0C6;
+	margin: 0px 2em;
+	border-right: none;
+}
+
+.sideMenu li li span
+{
+	display: block;
+	margin-top: -20px;
+	padding: 0; 
+	font-style: italic;
+}
+
+.sideMenu h2
+{
+	padding-left: 0.8em;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	background: #A3C586;
+	letter-spacing: -.5px;
+	font-size: 1.4em;
+	color: #464032;
+}
+
+/* Styles for the entire LavaLamp menu */
+.lavaLamp {
+    position: relative;
+}
+
+/* Represents the background of the highlighted menu-item. */
+.lavaLamp li.back 
+{
+	top: 3.8em;
+	background-color:#A3C586;
+    height: 6px;
+    width :200px;
+    position: absolute;
+}
+        
+.lavaLamp li.back .left {
+}
+
+/* Styles for each menu-item. */
+.lavaLamp li a {
+    
+}
+        
+/* SignOnLinks */
+
+#loggedOnUserDisplay
+{
+	padding: 0.4em 0;
+	float:right;
+}
+
+#loggedOnUserDisplay ul li
+{
+}
+
+#loggedOnUserDisplay ul li a
+{
+	font-size:small;
+}

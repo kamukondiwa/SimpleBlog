@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<Scripts/>
+	<Css/>
+	<use content="htmlInputScript" />
+	<use content="addthisscript" />
+	<use content="taxonomyScript"/>
+	<title>
+	<use content="title">
+		Simple Blog - Home
+	</use>
+	</title>
+	<use content="metaData"/>
+  </head>
+  <body>
+  
+	<div id="header">
+	
+		<div id="main-header">
+			<img id="logo"  alt="simple blog logo" src="/content/images/logo.png" />
+			<div id="navigation">
+				<MainMenu />
+			</div>
+		</div>
+
+	</div>
+	
+	<div id="menu">
+		<div id="recent">
+			<h1>Get Started</h1>
+			<p>
+			Start a simple blog account 
+			and try this simple blogging engine!
+			</p>
+			<SignOnLinks />
+			<SocialMenu />
+		</div>
+	</div>
+	
+	<div id="content">
+		<div id="container">
+			
+			<div id="mainTitle">
+				<use content="pageTitle"/>
+			</div>
+			
+			<div id="main">
+				<use content="view"/> 
+			</div>
+			
+			<div id="sub-section" class="page-content">
+			
+				<div id="social">
+				</div>
+			
+				<SideMenu />
+				
+				<ArchiveSection />
+				
+			</div>
+		</div>		
+	</div>	
+		
+	<div id="footer">
+	
+		<div id="main-footer">
+			<p>&copy; 2010 <a href="http://www.kamukondiwa.com" default="target">Kamukondiwa</a> | Design by Vern</a></p>
+		</div>	
+		<GoogleAnalytics/>
+	</div>
+	
+  </body>
+</html>

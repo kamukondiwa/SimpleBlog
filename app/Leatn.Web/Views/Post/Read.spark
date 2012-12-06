@@ -1,0 +1,76 @@
+﻿<viewdata model="BlogPostPageViewModel"/>
+
+<MetaDataTags MetaData="Model.Form"/>
+
+<content name="pageTitle">
+  <label class="page-title">
+	<h1>!{Html.ActionLink<BlogController>(c => c.Read(Model.BlogUrl), "Other posts by this user")}
+	  <if condition="Model.ShowEditLink">
+		|&nbsp;!{Html.ActionLink<PostController>(c => c.Edit(Model.BlogUrl, Model.Url), "Edit this post")}
+	  </if>
+	</h1>
+  </label>
+</content>
+
+<div class="page-content content-with-links" >
+
+<div class="post">
+	<h2 class="title">!{Model.Title}</h2>
+	<p class="meta"><span class="date">Posted !{Model.PostDate}</span><span class="posted">By <a href="#">!{Model.Author}</a></span></p>
+</div>
+
+<p>!{Model.Body}</p>
+
+<AddThis/>
+
+<%Html.Matrix(Model.Comments, 10, 1, comment =>
+  { %>
+		<div class="post">
+			<p class="meta"><span class="date">Commented on !{comment.CommentDate}</span>&nbsp;<span class="posted">By <a href="#">!{comment.Username}</a></span></p>
+			<div class="entry">
+				<p>!{comment.Body}</p>
+			</div>
+		</div>
+        <% }).Build();
+     %>	
+
+<hr />
+
+<h3>Add a comment</h3>
+
+  <form method="post" action="!{Url.Action("comment", "post", new { url = Model.BlogUrl })}">
+
+	<input type="hidden" id="CommentForm_BlogUrl"  name="CommentForm.BlogUrl" value="!{Model.BlogUrl}"/>
+	
+	<input type="hidden" id="CommentForm_PostUrl"  name="CommentForm.PostUrl" value="!{Model.Url}"/>
+	
+	<div class="formInput">
+		!{this.TextBox(x => x.CommentForm.Username).Label("Name (Required):")}
+		!{this.ValidationMessage(x => x.CommentForm.Username)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextBox(x => x.CommentForm.Email).Label("Email (Required):")}
+		!{this.ValidationMessage(x => x.CommentForm.Email)}
+	</div>
+	
+	<div class="formInput">
+		!{this.TextArea(x => x.CommentForm.Body).Label("Body (Required):")}
+		!{this.ValidationMessage(x => x.CommentForm.Body)}
+	</div>
+	
+	<div id="captcha">
+	    <label for="captcha">Please enter !{Html.CaptchaImage(50, 180)} below: </label>
+		!{this.TextBox(x => x.CommentForm.Captcha)}
+		!{this.ValidationMessage(x => x.CommentForm.Captcha)}
+	</div>
+
+	<div class="formInput">
+	!{this.SubmitButton("Comment")}
+	</div>
+	
+    !{Html.ClientSideValidation<BlogPostCommentFormViewModel>("CommentForm")}
+
+  </form>
+  
+  </div>

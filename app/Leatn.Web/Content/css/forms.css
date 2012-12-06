@@ -1,0 +1,49 @@
+﻿.formInput label
+{
+	font-weight: bold;
+	width: 10em;
+	float: left;
+	text-align: right;
+	margin-right: 0.8em;
+	display: block;
+	color:#62686d;
+}
+
+hr
+{
+	border: none;
+	border-bottom: dashed 1px #657077;
+}
+
+.formInput input[type=submit]
+{
+	margin-left: 3.8em;
+	float:left;
+}
+
+.formInput
+{
+	padding: 1em 0;
+}
+
+.formInput input[type=text]
+{
+	width: 300px;
+}
+
+.formInput input[type=password]
+{
+	width: 300px;
+}
+
+.formInput textarea
+{
+	width: 440px;
+	height: 160px;
+}
+
+.formInput select
+{
+	margin: 0 auto;
+	width: 300px;
+}

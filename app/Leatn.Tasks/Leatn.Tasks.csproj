@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFD18F41-7A79-4D4A-9F7D-EC5BC6865DA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Leatn.Tasks</RootNamespace>
+    <AssemblyName>Leatn.Tasks</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=0.3.0.54, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL" />
+    <Reference Include="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Gentax">
+      <HintPath>..\..\..\..\..\..\..\GenericTaxonomy\trunk\src\Gentax\Gentax\bin\Debug\Gentax.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications">
+      <HintPath>..\..\..\..\referencedAssemblies\Machine.Specifications\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.AutoMocking">
+      <HintPath>..\..\..\..\referencedAssemblies\Machine.Specifications\Machine.Specifications.AutoMocking.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\..\..\referencedAssemblies\RhinoMocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpArch, Version=1.6.0.0, Culture=neutral, PublicKeyToken=b5f559ae0ac4e006, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\SharpArch.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\..\referencedAssemblies\MEF\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BlogPost\BlogPostTasks.cs" />
+    <Compile Include="BlogPost\BlogPostTasksSpec.cs" />
+    <Compile Include="BlogPost\Mappers\BlogPostMapper.cs" />
+    <Compile Include="BlogPost\Mappers\Contracts\IBlogPostMapper.cs" />
+    <Compile Include="BlogPost\Specifications\BlogPostDateFromSpecification.cs" />
+    <Compile Include="BlogPost\Specifications\BlogPostDateToSpecification.cs" />
+    <Compile Include="BlogPost\Specifications\BlogPostKeywordSpecification.cs" />
+    <Compile Include="BlogPost\Specifications\LatesBlogPostSpecification.cs" />
+    <Compile Include="Blog\BlogTasks.cs" />
+    <Compile Include="Blog\BlogTasksSpec.cs" />
+    <Compile Include="Blog\Mappers\BlogMapper.cs" />
+    <Compile Include="Blog\Mappers\Contracts\IBlogMapper.cs" />
+    <Compile Include="Blog\Specifications\BlogDateFromSpecification.cs" />
+    <Compile Include="Blog\Specifications\BlogDateToSpecification.cs" />
+    <Compile Include="Blog\Specifications\BlogKeywordSpecification.cs" />
+    <Compile Include="Blog\Specifications\LatestBlogSpecification.cs" />
+    <Compile Include="Comment\Mappers\BlogPostCommentMapper.cs" />
+    <Compile Include="Comment\Mappers\Contracts\IBlogPostCommentMapper.cs" />
+    <Compile Include="Factories\BlogPostSpecificationFactory.cs" />
+    <Compile Include="Factories\BlogSpecificationFactory.cs" />
+    <Compile Include="Factories\Contracts\IBlogPostSpecificationFactory.cs" />
+    <Compile Include="Factories\Contracts\IBlogSpecificationFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\TasksRegistrarMarker.cs" />
+    <Compile Include="Registrar\FactoryRegistrar.cs" />
+    <Compile Include="Registrar\MapperRegistrar.cs" />
+    <Compile Include="Registrar\ServiceRegistrar.cs" />
+    <Compile Include="Registrar\SpecificationFactoryRegistrar.cs" />
+    <Compile Include="Registrar\TasksRegistrar.cs" />
+    <Compile Include="Search\SearchTasks.cs" />
+    <Compile Include="Search\SearchTasksSpec.cs" />
+    <Compile Include="Services\IdentityService.cs" />
+    <Compile Include="Taxonomy\TagTasks.cs" />
+    <Compile Include="Taxonomy\TaxonomyTasksSpec.cs" />
+    <Compile Include="User\Mappers\Contracts\IUserMapper.cs" />
+    <Compile Include="User\Mappers\UserMapper.cs" />
+    <Compile Include="User\UserTasks.cs" />
+    <Compile Include="User\UserTasksSpec.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Leatn.Domain\Leatn.Domain.csproj">
+      <Project>{7A00C6BC-63A3-4837-90EF-086C55CDAA63}</Project>
+      <Name>Leatn.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leatn.Framework\Leatn.Framework.csproj">
+      <Project>{9A74878B-D9C6-411B-879F-E3E1633EE2B7}</Project>
+      <Name>Leatn.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leatn.Web.Mvc\Leatn.Web.Mvc.csproj">
+      <Project>{41A8AC81-381C-43EB-93ED-9D8AAE2B60A5}</Project>
+      <Name>Leatn.Web.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="User\.svn\all-wcprops" />
+    <None Include="User\.svn\entries" />
+    <None Include="User\.svn\text-base\UserTasks.cs.svn-base" />
+    <None Include="User\.svn\text-base\UserTasksSpec.cs.svn-base" />
+    <None Include="User\Mappers\.svn\all-wcprops" />
+    <None Include="User\Mappers\.svn\entries" />
+    <None Include="User\Mappers\.svn\text-base\UserMapper.cs.svn-base" />
+    <None Include="User\Mappers\Contracts\.svn\all-wcprops" />
+    <None Include="User\Mappers\Contracts\.svn\entries" />
+    <None Include="User\Mappers\Contracts\.svn\text-base\IUserMapper.cs.svn-base" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\.svn\prop-base\" />
+    <Folder Include="User\.svn\props\" />
+    <Folder Include="User\.svn\tmp\prop-base\" />
+    <Folder Include="User\.svn\tmp\props\" />
+    <Folder Include="User\.svn\tmp\text-base\" />
+    <Folder Include="User\Mappers\.svn\prop-base\" />
+    <Folder Include="User\Mappers\.svn\props\" />
+    <Folder Include="User\Mappers\.svn\tmp\prop-base\" />
+    <Folder Include="User\Mappers\.svn\tmp\props\" />
+    <Folder Include="User\Mappers\.svn\tmp\text-base\" />
+    <Folder Include="User\Mappers\Contracts\.svn\prop-base\" />
+    <Folder Include="User\Mappers\Contracts\.svn\props\" />
+    <Folder Include="User\Mappers\Contracts\.svn\tmp\prop-base\" />
+    <Folder Include="User\Mappers\Contracts\.svn\tmp\props\" />
+    <Folder Include="User\Mappers\Contracts\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

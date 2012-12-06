@@ -1,0 +1,41 @@
+<div class="sideMenu">
+	<ul >
+	  <li>
+		<h2>
+		  Social
+		</h2>
+		<ul>
+			<li>
+				<a href="http://www.twitter.com/kamukondiwa" target="_blank"> Follow me
+				on Twitter</a>
+			</li>
+		</ul>
+	  </li>
+	 <!--
+    <li>
+      <h2>
+		  Projects
+		</h2>
+		<ul>
+		  <li>
+			<a href="http://www.kamukondiwa.com" target="_blank"> Kamukondiwa - My other pet
+			project</a>
+		  </li>
+		</ul>
+	  </li>
+   -->
+	  <li>
+		<h2>
+		  References
+		</h2>
+		<ul>
+		  <li>
+			<a href="http://sharparchitecture.net/" target="_blank">S#harp Architecture</a>
+		  </li>
+		  <li>
+			<a href="http://whocanhelpme.codeplex.com/" target="_blank">Who Can Help Me?</a>
+		  </li>
+		</ul>
+	  </li>	
+	</ul>
+</div>

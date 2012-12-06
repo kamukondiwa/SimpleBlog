@@ -1,0 +1,51 @@
+﻿h1{font-size:1.8em;}
+
+#recent h1{color:#FFFFFF;}
+
+h2{font-size:1.6em;}
+
+h2{font-size:1.4em;}
+
+h1, h2, h3{color:#5B7444;}
+
+.page-heading{ border-bottom:solid 2px #5B7444; width:100%; margin:1em 0;}
+
+.page-content{ background-color:#FFFFFF; padding:2em; overflow:hidden; margin: 1em 0;}
+
+.page-content h1 { margin-top:0;}
+
+.page-title h1 a { text-decoration: none; color:#638291; }
+
+.page-title h2{ color:#8ABC16; }
+
+.content-with-links a{ color:#638291; font-weight:bold; margin-bottom:2em; text-decoration: none;}
+
+.page-content p { color:#62686d; margin:0;}
+
+.page-content hr {border-bottom:solid 1px #62686d;}
+
+.scrolling-feed{width:100%;height: 260px; padding:0;}
+
+.scrolling-feed ul li{ padding:0; margin:0; }
+
+.right-content{width:44%; float: right;}
+
+.left-content{width:42%; float: left;}
+
+.page-simple{ color:#fcfcfc; font-weight:bold;}
+
+.soft-link{ background-color:#ececec; min-height:3em; padding:0.2em 2em; padding-top:0; }
+
+.soft-link a { text-decoration: none; color:#464032; margin:0; }
+
+#rss-icon{float:right;}
+
+.field-validation-error{color: #D63301; background-color: #FFCCBA; border:solid 1px #D63301;  font-weight:bold; margin-left:1em; padding:0.4em; white-space:pre-wrap;}
+
+#captcha{ float:left; width:100%; margin-left:10.8em; margin-bottom:2em;}
+
+#captcha label {font-weight: bold; width: 10em; text-align: left; color:#62686d; clear:both;}
+	
+#captcha input[type=text] {text-transform: uppercase; display:block; font-weight:bold; clear:left; width: 12em; height:2em; font-size:2em; margin-bottom:0.4em;  letter-spacing: 0.6em; text-align:center;}
+
+.close-button{float:right;}

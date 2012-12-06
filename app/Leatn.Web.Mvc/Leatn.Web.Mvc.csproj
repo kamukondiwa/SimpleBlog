@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41A8AC81-381C-43EB-93ED-9D8AAE2B60A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Leatn.Web.Mvc</RootNamespace>
+    <AssemblyName>Leatn.Web.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel">
+      <HintPath>..\..\lib\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\lib\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.WindsorAdapter">
+      <HintPath>..\..\lib\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Gentax">
+      <HintPath>..\..\..\..\..\..\..\GenericTaxonomy\trunk\src\Gentax\Gentax\bin\Debug\Gentax.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications">
+      <HintPath>..\..\..\..\referencedAssemblies\Machine.Specifications\Machine.Specifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Machine.Specifications.AutoMocking">
+      <HintPath>..\..\..\..\referencedAssemblies\Machine.Specifications\Machine.Specifications.AutoMocking.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib">
+      <HintPath>..\..\lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\..\..\referencedAssemblies\RhinoMocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpArch">
+      <HintPath>..\..\lib\SharpArch.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\..\referencedAssemblies\MEF\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xVal">
+      <HintPath>..\..\..\..\referencedAssemblies\xVal\xVal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AuthenticationRequiredAttribute.cs" />
+    <Compile Include="Attributes\AuthorizationAttribute.cs" />
+    <Compile Include="Attributes\WebOutputCacheAttrribute.cs" />
+    <Compile Include="Caching\CacheDependencies.cs" />
+    <Compile Include="Caching\CachingProvider.cs" />
+    <Compile Include="Caching\Contracts\ICachingProvider.cs" />
+    <Compile Include="Extensions\ExpressionHelper.cs" />
+    <Compile Include="Properties\WebMvcInfrastructureRegistrarMarker.cs" />
+    <Compile Include="Registrars\ComponentRegistrar.cs" />
+    <Compile Include="Resources\MvcResources.Designer.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\Contracts\ICellRenderer.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\Contracts\IMatrixRenderer.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\Contracts\IRowRenderer.cs" />
+    <Compile Include="UI\Components\Navigation\ActionLink.cs" />
+    <Compile Include="UI\Components\Navigation\EncodeType.cs" />
+    <Compile Include="UI\Components\Navigation\LinkBuilder.cs" />
+    <Compile Include="UI\Components\Navigation\MvcControl.cs" />
+    <Compile Include="UI\Components\Navigation\RouteValues.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Extensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\RulesExceptionExtensions.cs" />
+    <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="LowercaseRoute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testing\TaskSpecification.cs" />
+    <Compile Include="UI\Components\ComponentFactory.cs" />
+    <Compile Include="UI\Components\ComponentOutput.cs" />
+    <Compile Include="UI\Components\Contracts\IComponentOutput.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\CellMapper.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\CellMapperSpec.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\Contracts\ICellMapper.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\Contracts\IMatrixModelMapper.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\Contracts\IRowMapper.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\MatrixMapperFactory.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\MatrixModelMapper.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\MatrixModelMapperSpec.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\RowMapper.cs" />
+    <Compile Include="UI\Components\Matrix\Mappers\RowMapperSpec.cs" />
+    <Compile Include="UI\Components\Matrix\MatrixBuilder.cs" />
+    <Compile Include="UI\Components\Matrix\MatrixBuilderSpec.cs" />
+    <Compile Include="UI\Components\Matrix\MatrixSource.cs" />
+    <Compile Include="UI\Components\Matrix\Models\Cell.cs" />
+    <Compile Include="UI\Components\Matrix\Models\MatrixModel.cs" />
+    <Compile Include="UI\Components\Matrix\Models\Row.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\CellRenderer.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\CellRendererSpec.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\MatrixRenderer.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\MatrixRendererFactory.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\MatrixRendererSpec.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\RowRenderer.cs" />
+    <Compile Include="UI\Components\Matrix\Renderers\RowRendererSpec.cs" />
+    <Compile Include="UI\Components\TestModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Exceptions\.svn\all-wcprops" />
+    <None Include="Exceptions\.svn\entries" />
+    <None Include="Exceptions\.svn\text-base\NotFoundException.cs.svn-base" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\.svn\prop-base\" />
+    <Folder Include="Exceptions\.svn\props\" />
+    <Folder Include="Exceptions\.svn\tmp\prop-base\" />
+    <Folder Include="Exceptions\.svn\tmp\props\" />
+    <Folder Include="Exceptions\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Leatn.Domain\Leatn.Domain.csproj">
+      <Project>{7A00C6BC-63A3-4837-90EF-086C55CDAA63}</Project>
+      <Name>Leatn.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leatn.Framework\Leatn.Framework.csproj">
+      <Project>{9A74878B-D9C6-411B-879F-E3E1633EE2B7}</Project>
+      <Name>Leatn.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MvcResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

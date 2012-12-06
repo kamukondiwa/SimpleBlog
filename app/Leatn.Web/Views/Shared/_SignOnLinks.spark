@@ -1,0 +1,9 @@
+﻿<a if="!Request.IsAuthenticated" href="!{Url.Action<UserController>(x => x.Register())}">
+	<img alt="user registration button" src="/content/images/reg-button.png" />
+</a>
+<a if="!Request.IsAuthenticated" href="!{Url.Action<UserController>(x => x.SignOn(string.Empty))}">
+	<img alt="user sign on button" src="/content/images/sign_on_button.png" />
+</a>
+<a if="Request.IsAuthenticated" href="!{Url.Action<UserController>(x => x.SignOff())}">
+	<img alt="user sign off button" src="/content/images/sign_off_button.png" />
+</a>

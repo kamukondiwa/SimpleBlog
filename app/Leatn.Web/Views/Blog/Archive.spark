@@ -1,0 +1,26 @@
+﻿<viewdata model="BlogPostArchivePageViewModel"/>
+<content name="title">
+ Simple Blog - Archive
+</content>
+
+<content name="pageTitle">
+	&nbsp;
+</content>
+
+<div class="page-content content-with-links">
+
+	<h1 class="page-heading">Archive</h1>
+	
+	<%Html.Matrix(Model.Results, 10, 1, post =>
+      { %>
+	<div class="post">
+		<h2 class="title">!{Html.ActionLink<PostController>(c => c.Read(post.BlogUrl, post.Url), post.Title)}</h2>
+		<p class="meta"><span class="date">Posted on !{post.PostDate}</span><span class="posted">By <a href="#">!{post.Author}</a></span></p>
+		<div class="entry">
+			<p>!{post.Teaser}</p>
+			<p class="links">!{Html.ActionLink<PostController>(c => c.Read(post.BlogUrl, post.Url), "Read more")}</p>
+		</div>
+	</div>
+			<% }).Build();
+		 %>	
+</div>
